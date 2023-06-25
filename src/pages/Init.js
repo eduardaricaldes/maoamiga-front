@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logoinit.png";
 
@@ -27,8 +28,12 @@ export default function InitPage() {
         </ContainerTitlesSubtitles>
         <ContainerBottom>
           <div className="buttons">
-            <input type="button" value="Criar uma conta" />
-            <input type="button" value="Já tem uma conta? Login" />
+            <Link to="/category">
+              <input type="button" value="Criar uma conta" />
+            </Link>
+            <Link to="/sign-in">
+              <input type="button" value="Já tem uma conta? Login" />
+            </Link>
           </div>
         </ContainerBottom>
       </ContainerInitfooter>
