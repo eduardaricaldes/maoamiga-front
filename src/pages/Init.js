@@ -13,21 +13,25 @@ export default function InitPage() {
           <h1>Friendly Hands</h1>
         </div>
       </InitLogoTitle>
-      <ContainerBottom>
-        <div className="subtitleone">
-          <p>Todos os serviços que você precisa nas palmas das suas mãos</p>
-        </div>
-        <div className="subtitletwo">
-          <p>
-            para limpar, construção, encanamento e tudo mais. Nós ajudamos você
-            a encontrar perto da sua residência.
-          </p>
-        </div>
-        <div className="butom">
-          <input type="button" value="Criar uma conta" />
-          <input type="submit" value="Já tem uma conta? Login" />
-        </div>
-      </ContainerBottom>
+      <ContainerInitfooter>
+        <ContainerTitlesSubtitles>
+          <div className="subtitleone">
+            <p>Todos os serviços que você precisa nas palmas das suas mãos</p>
+          </div>
+          <div className="subtitletwo">
+            <p>
+              para limpar, construção, encanamento e tudo mais. Nós ajudamos
+              você a encontrar perto da sua residência.
+            </p>
+          </div>
+        </ContainerTitlesSubtitles>
+        <ContainerBottom>
+          <div className="buttons">
+            <input type="button" value="Criar uma conta" />
+            <input type="button" value="Já tem uma conta? Login" />
+          </div>
+        </ContainerBottom>
+      </ContainerInitfooter>
     </InitContainer>
   );
 }
@@ -59,7 +63,7 @@ const InitLogoTitle = styled.div`
     }
   }
 `;
-const ContainerBottom = styled.div`
+const ContainerInitfooter = styled.div`
   background-color: #fff;
   padding: 20px;
   border-top-left-radius: 20px;
@@ -68,37 +72,59 @@ const ContainerBottom = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-
+`;
+const ContainerTitlesSubtitles = styled.div`
   .subtitleone {
     margin-bottom: 10px;
     font-size: 30px;
-    font-weight: 100;
-    padding: 0px 30px 10px 0px;
+    font-style: italic;
+    font-weight: 200px;
   }
 
   .subtitletwo {
     margin-bottom: 20px;
     font-size: 13px;
-    font-weight: 300;
+    font-style: italic;
+    font-weight: 300px;
   }
-
-  .butom {
+`;
+const ContainerBottom = styled.div`
+  .buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 
     input[type="button"],
     input[type="button"] {
       padding: 10px 20px;
       border: none;
-      border-radius: 16px;
+      border-radius: 5px;
       background-color: #ac7ae9;
       color: #fff;
       font-weight: bold;
-      width: 359px;
       cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        input[type="button"],
+        input[type="submit"] {
+          flex: 1 0 100%;
+        }
+      }
+    }
+    @media (max-width: 1280px) and (max-height: 800px) {
+      .buttons {
+        flex-direction: column;
+
+        input[type="button"],
+        input[type="submit"] {
+          width: 100%;
+        }
+      }
     }
   }
 `;
