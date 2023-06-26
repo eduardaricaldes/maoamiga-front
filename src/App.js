@@ -3,7 +3,12 @@ import "./reset.css";
 
 import InitPage from "./pages/Init";
 import CategoryPage from "./pages/Category";
-import SignInPage from "./pages/SignIn";
+import SignInPage from "./pages/signIn";
+import SignUpPageUser from "./pages/signup-user";
+import SignUpPageProvider from "./pages/signup-provider";
+import HomePage from "./pages/Home";
+import AppointmentsPageUser from "./pages/Appointmentspageuser";
+import Homeproviderappointments from "./pages/Homeproviderappointments";
 
 function App() {
   return (
@@ -11,6 +16,17 @@ function App() {
       <Route path="/" element={<InitPage />} />
       <Route path="/category" element={<CategoryPage />} />
       <Route path="/sign-in" element={<SignInPage />} />
+      <Route path="/sign-up-user" element={<SignUpPageUser />} />
+      <Route path="/sign-up-provider" element={<SignUpPageProvider />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route
+        path="/appointments-page-user"
+        element={<AppointmentsPageUser />}
+      />
+      <Route
+        path="/appointments-page-user"
+        element={<Homeproviderappointments />}
+      />
     </Routes>
   );
 }

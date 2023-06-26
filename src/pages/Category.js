@@ -18,14 +18,14 @@ export default function CategoryPage() {
       </CategoryLogoTitle>
       <ContainerButtons>
         <ButtonUser>
-          <Link to="/outra-pagina">
+          <Link to="/sign-up-user">
             <input type="button" />
             <img src={logouser} alt="logouser" />
             <div className="button-text">usuario</div>
           </Link>
         </ButtonUser>
         <ButtonProvider>
-          <Link to="/outra-pagina">
+          <Link to="/sign-up-provider">
             <input type="button" />
             <img src={logouprovider} alt="logouprovider" />
             <div className="button-text">Prestador de serviços</div>
@@ -40,7 +40,6 @@ const CategoryContainer = styled.div`
   background-color: #3f55ad;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Lato", sans-serif;
@@ -48,7 +47,7 @@ const CategoryContainer = styled.div`
 
 const CategoryLogoTitle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
 

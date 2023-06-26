@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 import logodois from "../assets/logodois.png";
+import { Link } from "react-router-dom";
 
-export default function SignInPage() {
+export default function SignUpPageProvider() {
   return (
     <SignUpContainer>
       <SignUpLogoTitle>
@@ -14,15 +15,22 @@ export default function SignInPage() {
         </div>
       </SignUpLogoTitle>
       <ContainerMainForms>
-        <h2>Entrar</h2>
-        <p>Não tem uma conta?</p>
-        <input type="button" value="Criar uma conta" />
+        <h2>Criar uma conta</h2>
+        <p>Já tem uma conta?</p>
+        <Link to={"/sign-in"}>
+          <input type="button" value="Entrar" />
+        </Link>
         <ContainerForms>
           <form>
+            <input type="text" placeholder="Nome" />
             <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Endereço" />
+            <input type="seach" placeholder="Categoria" list="" />
             <input type="password" placeholder="Senha" />
-            <input type="button" value="esqueceu a senha ?" />
-            <SignInButton type="submit">Entrar</SignInButton>
+            <input type="password" placeholder="Senha" />
+            <Link to={"/sign-in"}>
+              <SignInButton type="submit">Vamos la!</SignInButton>
+            </Link>
           </form>
         </ContainerForms>
       </ContainerMainForms>
@@ -91,7 +99,9 @@ const ContainerForms = styled.div`
   cursor: pointer;
 
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="text"],
+  input[type="seach"] {
     display: block;
     border-radius: 16px;
     background: #fff;
