@@ -29,10 +29,10 @@ export default function InitPage() {
         <ContainerBottom>
           <div className="buttons">
             <Link to="/category">
-              <input type="button" value="Criar uma conta" />
+              <button>Criar uma conta</button>
             </Link>
             <Link to="/sign-in">
-              <input type="button" value="Já tem uma conta? Login" />
+              <button>Já tem uma conta? Login</button>
             </Link>
           </div>
         </ContainerBottom>
@@ -100,8 +100,7 @@ const ContainerBottom = styled.div`
     align-items: center;
     gap: 10px;
 
-    input[type="button"],
-    input[type="button"] {
+    button {
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
